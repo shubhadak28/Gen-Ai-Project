@@ -1,0 +1,93 @@
+JobApplicationSuccessPredictor/
+│
+├── streamlit_app.py          ← Main app file (UI + Prediction)
+├── train_model.py            ← Trains and saves the model files
+├── synthetic_job_data.csv    ← Sample data for training
+│
+├── model/                    ← Folder for saved ML model & encoders
+│   ├── job_success_model.pkl
+│   ├── le_edu.pkl
+│   ├── le_applied.pkl
+│   └── le_cover.pkl
+│
+├── requirements.txt          ← All required Python libraries
+└── README.md                 ← Project overview and instructions
+
+
+ Step-by-Step Execution Guide
+Step 1: Input Data
+You manually input:
+
+Years of experience
+
+Education level
+
+Skills match score
+
+Certifications
+
+Whether you applied before
+
+If you included a cover letter
+
+Step 2: Model Prediction
+These inputs are encoded into numerical format
+
+Passed into a RandomForestClassifier
+
+Model predicts:
+
+Yes / No – Will you get shortlisted?
+
+Confidence score (e.g., 87%)
+
+Step 3: Streamlit Frontend
+You interact with the app using sliders and radio buttons
+
+Press “Predict”
+
+The app shows the result:
+
+✅ "Likely to be shortlisted" or ❌ "Less likely..."
+
+Step 4: Optional – Gemini Assistant (Future Add-On)
+Gemini LLM will:
+
+Suggest resume improvements
+
+Generate sample cover letter lines
+
+Analyze why you might not get shortlisted
+
+Example interaction:
+
+You ask: “What can I improve in my profile?”
+
+Gemini replies: “Add 1 more certification in AI to increase your match score.”
+
+🧾 Files Explained
+File	Purpose
+streamlit_app.py	The user interface and prediction logic
+train_model.py	Trains the model using the CSV file
+synthetic_job_data.csv	Sample data to train the model
+model/*.pkl	Trained model + label encoders
+requirements.txt	Lets others install necessary Python packages
+README.md	Explains what the project does and how to use it
+
+🚀 What Happens Next?
+I’ll:
+Create all these files
+
+Zip them into one folder
+
+Give you a download link
+
+(Optional) Add Gemini assistant if you want advanced features
+
+You’ll be able to:
+
+Share this as a portfolio project
+
+Deploy it with Streamlit Community Cloud
+
+Customize it with Gemini tools later
